@@ -1,0 +1,48 @@
+﻿@model FrontierCodingTest.Models.AccountsContainerModel
+@{
+    ViewBag.Title = "Accounts";
+}
+<main class="content grid" id="home-content">
+    <div class="content-title-container">
+        <h2>Accounts</h2>
+    </div>
+    <section class="grid" id="account-grid">
+
+        <section class="account-column grid" id="active-account-column">
+            <div class="account-container-title" id="active-account-container-title">
+                <h3>Active</h3>
+            </div>
+            <div class="account-container active-account">
+                @foreach (var activeAccount in Model.ActiveAccounts)
+                {
+                    @Html.Partial("_PartialAccount", activeAccount)
+                }
+            </div>
+        </section>
+
+        <section class="account-column grid" id="overdue-account-column">
+            <div class="account-container-title" id="overdue-account-container-title">
+                <h3>Overdue</h3>
+            </div>
+            <div class="account-container overdue-account">
+                @foreach (var overdueAccount in Model.OverdueAccounts)
+                {
+                    @Html.Partial("_PartialAccount", overdueAccount)
+                }
+            </div>
+        </section>
+
+        <section class="account-column grid" id="inactive-account-column">
+            <div class="account-container-title" id="inactive-account-container-title">
+                <h3>Inactive</h3>
+            </div>
+            <div class="account-container inactive-account">
+                @foreach (var inactiveAccount in Model.InactiveAccounts)
+                {
+                    @Html.Partial("_PartialAccount", inactiveAccount)
+                }
+            </div>
+        </section>
+
+    </section>
+</main>

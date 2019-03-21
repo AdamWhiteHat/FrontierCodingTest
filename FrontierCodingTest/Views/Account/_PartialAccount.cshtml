@@ -1,0 +1,14 @@
+﻿@model FrontierCodingTest.Models.AccountModel
+
+<ul class="account-data-list">
+    <li>@Html.LabelFor(m => m.FullName): @Model.FullName</li>
+    <li>@Html.LabelFor(m => m.Email): @Html.DisplayFor(m => m.Email)</li>
+    <li>@Html.LabelFor(m => m.PhoneNumberFormatted): @Html.DisplayFor(m => m.PhoneNumberFormatted)</li>
+    <li>@Html.LabelFor(m => m.AmountDue): @Html.DisplayFor(m => m.AmountDue)</li>
+    @if (Model.PaymentDueDate.HasValue)
+    {
+            @:<li>@Html.LabelFor(m => m.PaymentDueDate): @Html.DisplayFor(m => m.PaymentDueDate)</li>
+    }
+</ul>
+<br />
+

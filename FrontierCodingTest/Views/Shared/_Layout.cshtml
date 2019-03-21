@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title - Frontier Airlines</title>
+    @Styles.Render("~/Content/reset.min.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<body class="fade-in">
+    <article class="grid">
+        <header class="grid">
+            <div class="title-container">
+                <h1>Coding Test</h1>
+            </div>
+        </header>
+
+        @RenderBody()
+
+        <footer class="grid">
+            <p class="copy">
+                &copy;
+                <script>document.write(new Date().getFullYear())</script> Frontier Airlines
+            </p>
+        </footer>
+    </article>
+</body>
+</html>
